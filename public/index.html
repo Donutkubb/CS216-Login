@@ -7,17 +7,48 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="button" onclick="submitLogin()">Login</button>
-            <button type="button" onclick="call_REST_API_Hello()">Hello</button>
-        </form>
-        <p id="message"></p>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <h1>Login Page</h1>
+                <img src="css/IMG_4341.jpg" alt="Description of image" class="profile-img">
+
+
+                <form id="loginForm" class="login">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>SELECT YOUR ROLE</option>
+                        <option value="student">STUDENT</option>
+                        <option value="teacher">TEACHER</option>
+                    </select>
+                    <label for="username">Username:</label>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" id="username" name="username" class="login__input" required placeholder="User name / Email">
+                    </div>
+                    <label for="password">Password:</label>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" id="password" name="password" class="login__input" required placeholder="Password">
+                    </div>
+                    <button type="button" class="button login__submit" onclick="submitLogin()">
+                        <span class="button__text">Login</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                    <button type="button" class="button login__submit" onclick="call_REST_API_Hello()">
+                        <span class="button__text">Hello</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <p id="message"></p>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>        
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>        
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
